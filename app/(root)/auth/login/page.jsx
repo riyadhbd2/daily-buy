@@ -20,6 +20,7 @@ import { useState } from "react";
 import { FaRegEyeSlash } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa6";
 import { z } from "zod";
+import Link from "next/link";
 
 const LoginPage = () => {
   const [loading, setLoading] = useState(false);
@@ -118,7 +119,7 @@ const LoginPage = () => {
                 />
               </div>
 
-              <div>
+              <div className="mb-3">
                 <ButtonLoading
                   loading={loading}
                   type="submit"
@@ -126,6 +127,21 @@ const LoginPage = () => {
                   className="w-full cursor-pointer"
                 />
               </div>
+              <div className="text-center">
+                <p>
+                  Don't have an account?{" "}
+                  <Link href="" className="text-blue-500 cursor-pointer">
+                    Create an account
+                  </Link>
+                </p>
+              </div>
+                <div className="text-center mt-2">
+                    <p>
+                    <Link href="/auth/forgot-password" className="text-blue-500 cursor-pointer text-sm">
+                        Forgot Password?
+                    </Link>
+                    </p>    
+                </div>
             </form>
           </Form>
         </div>
