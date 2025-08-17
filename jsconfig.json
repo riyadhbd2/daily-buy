@@ -1,7 +1,7 @@
+// jsconfig.json  (alias @ to the project root)
 {
   "compilerOptions": {
-    "paths": {
-      "@/*": ["./*"]
-    }
+    "baseUrl": ".",
+    "paths": { "@/*": ["./*"] }
   }
 }
